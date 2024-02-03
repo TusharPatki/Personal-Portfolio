@@ -7,7 +7,7 @@
     <title>Tushar Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -54,35 +54,73 @@
         main hr {
             border: 0;
             background: rgba(58, 28, 157, 0.509);
-            height: 1.5px;
+            height: 2px;
             margin: 30px 60px
         }
 
         .left {
-            font-size: 2rem;
+            font-size: 3rem;
         }
 
         .firstSection {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 100px 0;
+            margin: 160px 0;
+            position: relative;
 
         }
 
         .firstSection div {
-            width: 50%
+            width: 40%
         }
 
         .leftSection {
-            width: 30%;
-            font-size: 2.5rem;
-            margin: 50px
+            width: 40%;
+            font-size: 2rem;
+            margin: 10px;
+            z-index: 1;
+        }
+
+        .rightSection {
+            position: absolute;
+            /* Position right section absolutely within the first section */
+            right: 0;
+            /* Align to the right side of the first section */
+            top: 10%;
+            /* Center it vertically */
+            transform: translateY(-10%);
+            /* Offset the y-position to truly center it */
+            z-index: 1;
+            /* Lower z-index so it doesn't cover the text */
         }
 
         .rightSection img {
-            width: 60%;
-            margin: 40px 0
+            width: 50%;
+            margin: 40px 40px;
+            height: 20vw;
+            box-shadow: 0 0 20px 10px rgba(73, 24, 234, 0.5);
+            /* Backlight effect */
+        }
+
+        .toggle-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            /* Adjusts space between links */
+            margin-top: 20px;
+            /* Space from the name */
+        }
+
+        .toggle-links a {
+            color: rgba(73, 24, 234, 0.509);
+            /* Purple color for links */
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .toggle-links a:hover {
+            color: white;
         }
 
         .purple {
@@ -103,8 +141,9 @@
             align-items: center;
             /* Centers the children */
         }
+
         .secondsection h1 {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             /* Space under the title */
         }
@@ -112,6 +151,7 @@
         .text-gray {
             color: rgba(73, 24, 234, 0.509);
             margin-bottom: 10px;
+            font-size: 1.5rem;
             /* Space under the subtitle */
         }
 
@@ -131,7 +171,7 @@
             /* Text color */
             margin-bottom: 30px;
             /* Space between each experience block */
-            padding: 20px;
+            padding: 30px;
             border-radius: 5px;
             /* Rounded corners */
             width: 80%;
@@ -157,10 +197,12 @@
             font-size: 14px;
             /* Adjust font size as necessary */
         }
-               /* Footer styles */
-               .footer {
+
+        /* Footer styles */
+        .footer {
             width: 100%;
-            background: rgba(58, 28, 157, 0.509); /* Footer background */
+            background: rgba(58, 28, 157, 0.509);
+            /* Footer background */
             color: white;
             padding: 20px 0;
             display: flex;
@@ -195,7 +237,8 @@
         }
 
         .footer-column ul li a:hover {
-            color: #b39ddb; /* Light purple for hover effect */
+            color: #b39ddb;
+            /* Light purple for hover effect */
         }
 
         /* Responsive footer */
@@ -229,15 +272,18 @@
         <section class="firstSection">
             <div class="leftSection">
                 Hi, My name is <span class='purple'>Tushar</span>
-
                 <div>and I am </div>
                 <span id="element"></span>
+                <div class="toggle-links">
+                    <a href="https://www.linkedin.com/in/tushar-patki-profile" target="_blank">LinkedIn</a>
+                    <a href="mailto:tusharpatki9@gmail.com">Email</a>
+                    <a href="https://github.com/TusharPatki" target="_blank">GitHub</a>
+                </div>
 
-            </div>
-
-            <div class="rightSection">
-                <img src="DALL_E_2024-02-03_04.00.44_-_Design_a_colored_icon_that_portrays_an_Operations_Manager_working_at_a_desk__managing_a_team__with_a_transparent_background._The_icon_should_depict_a_-removebg-preview.png" alt="">
-            </div>
+                <div class="rightSection">
+                    <img src="DALL_E_2024-02-03_04.00.44_-_Design_a_colored_icon_that_portrays_an_Operations_Manager_working_at_a_desk__managing_a_team__with_a_transparent_background._The_icon_should_depict_a_-removebg-preview.png"
+                        alt="profile-photo">
+                </div>
 
 
         </section>
@@ -266,84 +312,84 @@
                         data, and managed and mentored a team to ensure efficient operations.
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <div class="Vertical">
-                    <img class="image-top" src="Customer support executive.webp" alt="">
-                    <div class="Vertical-title">
-                        Customer Care Executive at Teleperformance (2020-2021)
-                    </div>
-                    <div class="Vertical-desc">
-                        As a Customer Care Executive at Teleperformance, I was part of the International Inbound Voice
-                        process team for Du telecom, handling customers from 75 destinations worldwide. This role
-                        enhanced my ability to interact with customers of diverse accents and backgrounds, especially
-                        those from the USA and UK. Responsibilities included providing exceptional customer service,
-                        adhering to company KPIs, and maintaining high-quality standards. I worked on the Escalation
-                        desk, handling difficult and irate customers and email escalations to resolve issues promptly.
-                        Additionally, I provided technical assistance and troubleshooting, consistently achieving PAR
-                        (Performance Above Requirement) status. My continuous learning and adherence to customer service
-                        principles and practices have been pivotal in effectively resolving customer issues.
-                    </div>
+            <div class="Vertical">
+                <img class="image-top" src="Customer support executive.webp" alt="">
+                <div class="Vertical-title">
+                    Customer Care Executive at Teleperformance (2020-2021)
                 </div>
+                <div class="Vertical-desc">
+                    As a Customer Care Executive at Teleperformance, I was part of the International Inbound Voice
+                    process team for Du telecom, handling customers from 75 destinations worldwide. This role
+                    enhanced my ability to interact with customers of diverse accents and backgrounds, especially
+                    those from the USA and UK. Responsibilities included providing exceptional customer service,
+                    adhering to company KPIs, and maintaining high-quality standards. I worked on the Escalation
+                    desk, handling difficult and irate customers and email escalations to resolve issues promptly.
+                    Additionally, I provided technical assistance and troubleshooting, consistently achieving PAR
+                    (Performance Above Requirement) status. My continuous learning and adherence to customer service
+                    principles and practices have been pivotal in effectively resolving customer issues.
+                </div>
+            </div>
 
-                <div class="Vertical">
-                    <img class="image-top" src="Blend process specialist.webp" alt="">
-                    <div class="Vertical-title">
-                        Blend Process Specialist at Classified Page (2021-2022)
-                    </div>
-                    <div class="Vertical-desc">
-                        In my role as a Blend Process Specialist for five different classified pages, I handle both chat
-                        and email support, catering to a diverse user base from the USA, UK, Africa, and Asia. My
-                        responsibilities involve screening user documents to detect and remove unethical activities
-                        through escalation or immediate removal, ensuring a safe and trustworthy environment. I am adept
-                        at responding to customer inquiries and complaints with timeliness and professionalism,
-                        leveraging my strong communication and customer service skills. My role also includes providing
-                        technical assistance, utilizing data analysis to drive business growth, and continuously
-                        monitoring customer satisfaction to maintain high service standards. As a team leader, I manage
-                        and mentor my team for efficient operations and continuously update my knowledge to stay aligned
-                        with industry trends and best practices.
-                    </div>
+            <div class="Vertical">
+                <img class="image-top" src="Blend process specialist.webp" alt="">
+                <div class="Vertical-title">
+                    Blend Process Specialist at Classified Page (2021-2022)
                 </div>
+                <div class="Vertical-desc">
+                    In my role as a Blend Process Specialist for five different classified pages, I handle both chat
+                    and email support, catering to a diverse user base from the USA, UK, Africa, and Asia. My
+                    responsibilities involve screening user documents to detect and remove unethical activities
+                    through escalation or immediate removal, ensuring a safe and trustworthy environment. I am adept
+                    at responding to customer inquiries and complaints with timeliness and professionalism,
+                    leveraging my strong communication and customer service skills. My role also includes providing
+                    technical assistance, utilizing data analysis to drive business growth, and continuously
+                    monitoring customer satisfaction to maintain high service standards. As a team leader, I manage
+                    and mentor my team for efficient operations and continuously update my knowledge to stay aligned
+                    with industry trends and best practices.
+                </div>
+            </div>
 
-                <div class="Vertical">
-                    <img class="image-top" src="Customer support spcialist.webp" alt="">
-                    <div class="Vertical-title">
-                        Customer Service Specialist at Yaper Technologies (2022-2023)
-                    </div>
-                    <div class="Vertical-desc">
-                        In my role at Yaper Technologies, a Fintech startup facilitating side income through credit card
-                        purchases, I embraced a multi-dimensional role encompassing a wide range of responsibilities. My
-                        duties included handling customer complaints across calls, chat, and tickets, and acting in a
-                        full backend role to conduct surveys and feedback calls. These activities were aimed at
-                        reporting consistent user problems and their sought solutions to senior management.
-                        Additionally, I conducted service recovery calls to address and solve user issues, including the
-                        removal of negative reviews from the Playstore. My role demonstrated exceptional skills in
-                        negotiation and payment team management, ensuring smooth and efficient operations. I also
-                        applied my data analysis skills to identify improvement areas and drive business growth.
-                    </div>
+            <div class="Vertical">
+                <img class="image-top" src="Customer support spcialist.webp" alt="">
+                <div class="Vertical-title">
+                    Customer Service Specialist at Yaper Technologies (2022-2023)
                 </div>
+                <div class="Vertical-desc">
+                    In my role at Yaper Technologies, a Fintech startup facilitating side income through credit card
+                    purchases, I embraced a multi-dimensional role encompassing a wide range of responsibilities. My
+                    duties included handling customer complaints across calls, chat, and tickets, and acting in a
+                    full backend role to conduct surveys and feedback calls. These activities were aimed at
+                    reporting consistent user problems and their sought solutions to senior management.
+                    Additionally, I conducted service recovery calls to address and solve user issues, including the
+                    removal of negative reviews from the Playstore. My role demonstrated exceptional skills in
+                    negotiation and payment team management, ensuring smooth and efficient operations. I also
+                    applied my data analysis skills to identify improvement areas and drive business growth.
+                </div>
+            </div>
 
-                <div class="Vertical">
-                    <img class="image-top" src="Operation manager 1.png">
-                    <div class="Vertical-title">
-                        Operations Manager at Yaper Technologies (2023-Present)
-                    </div>
-                    <div class="Vertical-desc">
-                        As an Operation Manager with a passion for driving success, my background encompasses 🌟
-                        Customer Service, 🚀 Leadership, and 💼 Excel and finance expertise. Leading a high-performing
-                        team of 6, we're making a significant impact in the following areas:
-                        <ul>
-                            <li>📞 <strong>Customer Service:</strong> Leading a team of 5 to prioritize customer
-                                satisfaction and ensure strong retention rates.</li>
-                            <li>📦 <strong>Operations Excellence:</strong> Managing over 7000+ orders monthly,
-                                streamlining processes for maximum efficiency.</li>
-                            <li>💰 <strong>Financial Stewardship:</strong> Handling more than 20 Crore Rs monthly,
-                                ensuring the financial health of our organization.</li>
-                            <li>📊 <strong>Order Management:</strong> Focusing on precision and accuracy in order
-                                creation, aligning processes with our goals.</li>
-                        </ul>
-                    </div>
+            <div class="Vertical">
+                <img class="image-top" src="Operation manager 1.webp">
+                <div class="Vertical-title">
+                    Operations Manager at Yaper Technologies (2023-Present)
                 </div>
+                <div class="Vertical-desc">
+                    As an Operation Manager with a passion for driving success, my background encompasses 🌟
+                    Customer Service, 🚀 Leadership, and 💼 Excel and finance expertise. Leading a high-performing
+                    team of 6, we're making a significant impact in the following areas:
+                    <ul>
+                        <li>📞 <strong>Customer Service:</strong> Leading a team of 5 to prioritize customer
+                            satisfaction and ensure strong retention rates.</li>
+                        <li>📦 <strong>Operations Excellence:</strong> Managing over 7000+ orders monthly,
+                            streamlining processes for maximum efficiency.</li>
+                        <li>💰 <strong>Financial Stewardship:</strong> Handling more than 20 Crore Rs monthly,
+                            ensuring the financial health of our organization.</li>
+                        <li>📊 <strong>Order Management:</strong> Focusing on precision and accuracy in order
+                            creation, aligning processes with our goals.</li>
+                    </ul>
+                </div>
+            </div>
 
         </section>
 
@@ -351,8 +397,8 @@
 
 
     </main>
-       <!-- Footer -->
-       <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-column">
             <h3>Tushar's Portfolio</h3>
             <ul>
@@ -371,7 +417,8 @@
             <h3>Contact</h3>
             <ul>
                 <li><a href="mailto:tusharpatki9@gmail.com">Email Me</a></li>
-                <li><a href="https://www.linkedin.com/in/tushar-patki-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/tushar-patki-profile" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
         </div>
     </footer>
