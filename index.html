@@ -7,7 +7,8 @@
     <title>Tushar Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -59,15 +60,17 @@
         }
 
         .left {
-            font-size: 3rem;
+            font-size: 3vw;
+            /* Adjust the value as needed */
         }
 
         .firstSection {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 160px 0;
+            margin: 180px 0;
             position: relative;
+            padding-right: 40%;
 
         }
 
@@ -76,7 +79,7 @@
         }
 
         .leftSection {
-            width: 40%;
+            width: 70%;
             font-size: 2rem;
             margin: 10px;
             z-index: 1;
@@ -87,40 +90,86 @@
             /* Position right section absolutely within the first section */
             right: 0;
             /* Align to the right side of the first section */
-            top: 10%;
+            top: 35%;
             /* Center it vertically */
-            transform: translateY(-10%);
+            transform: translateY(-35%);
             /* Offset the y-position to truly center it */
             z-index: 1;
             /* Lower z-index so it doesn't cover the text */
         }
 
         .rightSection img {
-            width: 50%;
+            width: 70%;
             margin: 40px 40px;
-            height: 20vw;
+            height: 25vw;
             box-shadow: 0 0 20px 10px rgba(73, 24, 234, 0.5);
             /* Backlight effect */
         }
 
-        .toggle-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            /* Adjusts space between links */
-            margin-top: 20px;
-            /* Space from the name */
+        .toggle-links a img {
+            height: 30px;
+            /* Adjust the size as needed */
+            width: 30px;
+            /* Adjust the size as needed */
+            transition: filter 0.3s;
+            padding-left: 100%;
         }
 
         .toggle-links a {
             color: rgba(73, 24, 234, 0.509);
             /* Purple color for links */
             text-decoration: none;
-            font-size: 1rem;
         }
+
+
+        .toggle-links a:hover,
+        .toggle-links a:focus {
+            color: white;
+        }
+
+
+        .toggle-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            /* Adjusts space between links */
+            margin-top: 30px;
+            /* Space from the name */
+        }
+
 
         .toggle-links a:hover {
             color: white;
+        }
+
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .toggle-links a img {
+                height: 25px;
+                /* Slightly smaller on mobile */
+                width: 25px;
+                /* Slightly smaller on mobile */
+            }
+
+            .toggle-links {
+                gap: 20px;
+                /* Less gap on mobile */
+                margin-top: 20px;
+                /* Less margin on the top on mobile */
+            }
+
+            .leftSection {
+                font-size: 1.5rem;
+                /* Smaller font size on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .leftSection {
+                font-size: 2rem;
+                /* Larger font size for very small screens */
+            }
         }
 
         .purple {
@@ -224,6 +273,8 @@
         .footer-column ul {
             list-style: none;
             padding: 0;
+            width: 100%;
+            text-align: center;
         }
 
         .footer-column ul li {
@@ -234,6 +285,7 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
+            display: block;
         }
 
         .footer-column ul li a:hover {
@@ -242,7 +294,7 @@
         }
 
         /* Responsive footer */
-        @media (max-width: 768px) {
+        @media (max-width: 790px) {
             .footer {
                 flex-direction: column;
             }
@@ -275,10 +327,17 @@
                 <div>and I am </div>
                 <span id="element"></span>
                 <div class="toggle-links">
-                    <a href="https://www.linkedin.com/in/tushar-patki-profile" target="_blank">LinkedIn</a>
-                    <a href="mailto:tusharpatki9@gmail.com">Email</a>
-                    <a href="https://github.com/TusharPatki" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/tushar-patki-profile" target="_blank">
+                        <img src="linkedin icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="mailto:tusharpatki9@gmail.com">
+                        <img src="gmail icon.png" Email">
+                    </a>
+                    <a href="https://github.com/TusharPatki" target="_blank">
+                        <img src="github icon.png" alt="GitHub">
+                    </a>
                 </div>
+
 
                 <div class="rightSection">
                     <img src="DALL_E_2024-02-03_04.00.44_-_Design_a_colored_icon_that_portrays_an_Operations_Manager_working_at_a_desk__managing_a_team__with_a_transparent_background._The_icon_should_depict_a_-removebg-preview.png"
@@ -426,7 +485,7 @@
     <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#element', {
-            strings: ['an Operation Manager', 'a Team Leader', 'a Customer Service Specialist'],
+            strings: ['an Operation Manager', 'a Team Leader', 'a Business Analyst'],
             typeSpeed: 80,
         });
     </script>
